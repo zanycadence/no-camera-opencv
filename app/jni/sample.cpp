@@ -34,7 +34,9 @@ extern "C"
         cv::Mat m_dst(h, w, CV_8UC4);
 
         // OpenCV process
-        cv::cvtColor(m_src, m_dst, CV_RGBA2BGRA);
+        //cv::cvtColor(m_src, m_dst, CV_RGBA2BGRA);
+        // if you want to color convert and flip, change m_src to m_dst below
+        cv::flip(m_src, m_dst, 0);
 
 
         // Pick out arrangement from cv::Mat
